@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Translator Sunda-Indo</title>
+</head>
+<body>
+    <H1>Sundanese Translator</H1>
+    <form action="/translate" method="POST" id="inputForm">
+        <h3>Input Text</h3>
+        <textarea name="inputText" id="inputText" cols="50" rows="5"></textarea>
+        <br><br>
+        <select name="translationOption">
+            <option selected>Select Translation</option>
+            <option value="sunda-indo">Sunda to Indo</option>
+            <option value="indo-sunda">Indo to Sunda</option>
+        </select>
+        <br><br>
+        <select name="algoOption">
+            <option selected>Select Algorithm</option>
+            <option value="kmp">KMP</option>
+            <option value="boyerMoore">Boyer_Moore</option>
+            <option value="regexMatcher">regex_matcher</option>
+        </select>
+        <br><br>
+        <button >Translate</button>
+        <br><br>
+    </form>
+    <h3>Result</h3>
+    <textarea readonly name="resultText" id="resultText" cols="50" rows="5">{{ result }}</textarea>
+</body>
+</html>
