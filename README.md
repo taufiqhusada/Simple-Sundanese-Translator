@@ -50,4 +50,4 @@ Sunda : abdi henteu tiasa bahasa Sunda
 ```
 
 ## Video demo
-
+link demo video in youtube: https://youtu.be/GTMgkZm1RGU
