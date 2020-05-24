@@ -8,6 +8,8 @@ def solve(inputText, algoOption, translationOption):
         return translateSundaToIndo(inputText, algoOption)
 
 def doTranslate(inputText, algoOption, kamus):
+    # fungsi untuk menerjemahkan kata sesuai opsi yang dipilih
+
     inputText = inputText.lower()
     for pairKata in kamus:
         if (len(pairKata[0])==len(inputText)):
@@ -23,9 +25,11 @@ def doTranslate(inputText, algoOption, kamus):
     return inputText
 
 def translateIndoToSunda(inputText, algoOption):
+    # fungsi untuk menerjemahkan text indonesia ke sunda
+
     kamus = extractKamus('indo-sunda')
 
-    subjekSunda = ['anjeun', 'anjeunna', 'maneh', 'manehna', 'urang', 'abdi', 'aing', 'ieu']
+    subjekSunda = ['anjeun', 'anjeunna', 'maneh', 'manehna', 'urang', 'abdi', 'aing', 'ieu']    # kata subjek bahasa sunda
     isAlreadyUseTeh = False
 
     resultText = []
@@ -45,9 +49,11 @@ def translateIndoToSunda(inputText, algoOption):
     return (" ".join(resultText))
 
 def translateSundaToIndo(inputText, algoOption):
+    # fungsi untuk menerjemahkan text sunda ke indo
+
     kamus = extractKamus('sunda-indo')
 
-    notImportantStopWords = ['teh','mah','tea']
+    notImportantStopWords = ['teh','mah','tea']     #stopwords bahasa sunda yang bisa diabaikan
 
     resultText = []
     listKata = inputText.split(' ')

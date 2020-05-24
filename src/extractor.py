@@ -1,4 +1,6 @@
 def extractKamus(optTranslation):
+    #fungsi untuk mengekstract kamus yang ada di folder data
+
     if (optTranslation=="indo-sunda"):
         listTranslate = open("../data/indonesia.txt", "r").readlines()
     else:
